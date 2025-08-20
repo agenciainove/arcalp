@@ -39,11 +39,11 @@ const Hero = () => {
 
       {/* Main Headline */}
       <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-[#0B3B5A] leading-tight mb-4">
-        Escritório Virtual por <span className="text-[#F5C542]">R$199/mês</span> e Self Storage flexível em Porto Alegre
+        Escritório Virtual e Self Storage flexível em Porto Alegre
       </h1>
       
       <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-        Endereço fiscal/postal para sua empresa e boxes de 1m³ a 7m² (até 3m de altura). 
+        Endereço fiscal/postal para sua empresa e boxes seguros para armazenamento. 
         Seguro incluso e proteção contra raios.
       </p>
 

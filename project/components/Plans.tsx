@@ -13,8 +13,8 @@ const Plans = () => {
   const virtualOfficeePlans = [
     {
       name: "Plano Fiscal",
-      price: "R$ 199",
-      period: "/mês",
+      price: "Sob consulta",
+      period: "",
       description: "Perfeito para quem precisa apenas de endereço fiscal",
       features: [
         "Endereço fiscal para CNPJ",
@@ -38,14 +38,6 @@ const Plans = () => {
       ],
       popular: false
     }
-  ];
-
-  const storageSizes = [
-    { size: "1m³", use: "Caixas e documentos", icon: "📦" },
-    { size: "2m²", use: "Arquivos e pequenos móveis", icon: "🗂️" },
-    { size: "3m²", use: "Mudança leve/quarto pequeno", icon: "🛏️" },
-    { size: "5m²", use: "Móveis + estoque e-commerce", icon: "📱" },
-    { size: "7m²", use: "Móveis de apto/studio", icon: "🏠" }
   ];
 
   return (
@@ -116,41 +108,62 @@ const Plans = () => {
           </div>
         </div>
 
-        {/* Self Storage Sizes */}
+        {/* Self Storage */}
         <div>
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0B3B5A] mb-4">
-              Tamanhos Self Storage
+              Self Storage
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Boxes moduláveis para diferentes necessidades. Altura até 3m. Preços sob consulta.
+              Boxes seguros e moduláveis para suas necessidades de armazenamento.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-            {storageSizes.map((item, index) => (
-              <Card 
-                key={index}
-                className="text-center hover:shadow-md transition-shadow duration-300"
-              >
-                <CardContent className="p-6">
-                  <div className="text-3xl mb-3">{item.icon}</div>
-                  <h3 className="text-xl font-bold text-[#0B3B5A] mb-2">
-                    {item.size}
-                  </h3>
-                  <p className="text-sm text-gray-600">{item.use}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img 
+                src="https://images.pexels.com/photos/4246120/pexels-photo-4246120.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Self Storage - Boxes organizados"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-[#0B3B5A] mb-2">Boxes Organizados</h3>
+                <p className="text-sm text-gray-600">Espaços limpos e organizados para seus pertences</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img 
+                src="https://images.pexels.com/photos/4246083/pexels-photo-4246083.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Self Storage - Segurança"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-[#0B3B5A] mb-2">Máxima Segurança</h3>
+                <p className="text-sm text-gray-600">Sistema de segurança 24h e controle de acesso</p>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img 
+                src="https://images.pexels.com/photos/4246119/pexels-photo-4246119.jpeg?auto=compress&cs=tinysrgb&w=800" 
+                alt="Self Storage - Facilidade de acesso"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-4">
+                <h3 className="font-semibold text-[#0B3B5A] mb-2">Fácil Acesso</h3>
+                <p className="text-sm text-gray-600">Acesso facilitado aos seus boxes quando precisar</p>
+              </div>
+            </div>
           </div>
 
           <div className="text-center">
             <Button
               onClick={scrollToContact}
-              data-gtm="storage-sizes-cta"
+              data-gtm="storage-cta"
               className="bg-[#F5C542] hover:bg-[#F5C542]/90 text-[#0B3B5A] px-6 py-3 font-semibold rounded-lg inline-flex items-center space-x-2"
             >
-              <span>Verificar disponibilidade</span>
+              <span>Solicitar orçamento</span>
               <ArrowRight size={20} />
             </Button>
           </div>
